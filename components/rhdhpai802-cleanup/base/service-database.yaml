@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Service
+metadata:
+  labels:
+    app.kubernetes.io/instance: rhdhpai802-cleanup-database
+    app.kubernetes.io/managed-by: kustomize
+    app.kubernetes.io/name: rhdhpai802-cleanup-database
+  name: rhdhpai802-cleanup-database
+spec:
+  ports:
+    - port: 
+      protocol: TCP
+      targetPort: 
+  selector:
+    app.kubernetes.io/instance: rhdhpai802-cleanup-database

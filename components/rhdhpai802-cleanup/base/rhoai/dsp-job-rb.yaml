@@ -1,0 +1,12 @@
+kind: RoleBinding
+apiVersion: rbac.authorization.k8s.io/v1
+metadata:
+  name: rhdhpai802-cleanup-dsp-job-rolebinding
+subjects:
+  - kind: ServiceAccount
+    name: rhdhpai802-cleanup-dsp-job
+    namespace: rhdhpai802-cleanup
+roleRef:
+  apiGroup: rbac.authorization.k8s.io
+  kind: Role
+  name: rhdhpai802-cleanup-dsp-job-role
